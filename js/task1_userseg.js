@@ -106,7 +106,9 @@ export function update(data, filters) {
     .attr("cx", d => x(d.buy))
     .attr("cy", d => y(d.search))
     .attr("r", 4)
-    .attr("fill", "steelblue")
+    .attr("fill", "none")
+    .attr("stroke", "steelblue")
+    .attr("stroke-opacity", 0.5)
     .on("mouseover", (event, d) => {
       tooltip.style("visibility", "visible")
         .text(`Client ${d.client_id} | Buy: ${d.buy}, Search: ${d.search}`);
